@@ -1,0 +1,416 @@
+/* 
+    STYLE.CSS
+    File ini mengatur tampilan (desain) dari website.
+    Tema: Minimalist Modern (Putih, Hitam, Kuning)
+*/
+
+/* --- 1. VARIABEL WARNA & RESET --- */
+:root {
+  --bg-color: #ffffff;
+  /* Warna Latar Belakang Utama (Putih) */
+  --secondary-bg: #f8f9fa;
+  /* Warna Latar Belakang Sekunder (Abu-abu sangat muda) */
+  --text-color: #1a1a1a;
+  /* Warna Teks Utama (Hitam pekat) */
+  --text-light: #555555;
+  /* Warna Teks Pendukung (Abu-abu) */
+  --accent-color: #ffd700;
+  /* Warna Aksen (Kuning Emas) */
+  --accent-hover: #ffd700;
+  /* Warna Aksen saat di-hover (Kuning lebih gelap) */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Efek bayangan halus */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* Efek scroll halus saat klik menu */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  /* Menggunakan font Poppins */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Container agar konten tidak terlalu lebar di layar besar */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- 2. NAVBAR (NAVIGASI) --- */
+.navbar {
+  background-color: var(--bg-color);
+  padding: 1rem 0;
+  position: sticky;
+  /* Menu tetap di atas saat di-scroll */
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.logo span {
+  color: var(--accent-color);
+  /* Titik berwarna kuning */
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  /* Jarak antar menu diperlebar agar lebih proporsional */
+}
+
+.nav-links a {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  /* Memberikan sedikit jarak antar huruf agar lebih modern */
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #cca300;
+  /* Warna sedikit gelap saat hover (bukan kuning terang agar terbaca di putih) */
+  /* Atau bisa menggunakan border bawah kuning */
+  border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- HAMBURGER MENU (untuk Mobile) --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 4px;
+  background-color: var(--text-color);
+  transition: 0.3s ease;
+  border-radius: 2px;
+  display: block;
+}
+
+/* --- 3. HERO SECTION --- */
+.hero {
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  /* Minimal tinggi 80% layar */
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  /* Agar di HP gambar di atas/bawah sesuai keinginan */
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.hero-content p {
+  margin-bottom: 30px;
+  color: var(--text-light);
+  max-width: 500px;
+}
+
+/* Efek highlight kuning pada teks */
+.highlight {
+  position: relative;
+  z-index: 1;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: var(--accent-color);
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+  margin-bottom: 30px;
+}
+
+.hero-image img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  /* Membuat gambar jadi bulat */
+  border: 5px solid var(--accent-color);
+  box-shadow: var(--shadow);
+}
+
+/* --- 4. SECTION TITLE (JUDUL BAGIAN) --- */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 10px auto 0;
+}
+
+/* --- 5. ABOUT SECTION --- */
+.about {
+  padding: 80px 0;
+  background-color: var(--secondary-bg);
+  /* Background abu muda */
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- 6. SKILLS SECTION --- */
+.skills {
+  padding: 80px 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: var(--bg-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s, border 0.3s;
+  border-top: 5px solid transparent;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-top: 5px solid var(--accent-color);
+}
+
+.skill-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* --- 7. PROJECTS SECTION --- */
+.projects {
+  padding: 80px 0;
+  background-color: var(--secondary-bg);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.project-info p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* --- 8. CONTACT SECTION --- */
+.contact {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  color: var(--text-light);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  border: 2px solid var(--text-color);
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+/* --- 9. FOOTER --- */
+footer {
+  background-color: var(--text-color);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+/* --- RESPONSIVE (TAMPILAN HP) --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    /* Sesuaikan dengan tinggi navbar */
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: 16px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .navbar .container {
+    /* Kembalikan flex direction ke row agar logo dan hamburger sejajar */
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Nanda Chil</title>
+  <!-- Menghubungkan file CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Menggunakan Font dari Google Fonts (Opsional, agar terlihat lebih modern) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- 
+        NAVIGASI (NAVBAR) 
+        Bagian ini untuk menu navigasi di bagian atas halaman.
+    -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">Portofolio<span>.</span></a>
+      
+      <!-- Hamburger Menu Button -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Tentang Saya</a></li>
+        <li><a href="#skills">Keahlian</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 
+        HERO SECTION 
+        Bagian utama yang pertama kali dilihat pengunjung.
+        Ganti "Nama Anda" dengan nama lengkap siswa.
+    -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Halo, Saya <span class="highlight">Nanda</span></h1>
+        <h2>Siswa Teknik Komputer & Jaringan</h2>
+        <p>
+          Membangun jaringan yang stabil, aman, dan efisien untuk masa depan.
+        </p>
+        <a href="#about" class="btn">Kenali Saya Lebih Jauh</a>
+      </div>
+      <!-- 
+                GAMBAR PROFIL
+                Simpan foto profil anda dengan nama 'profile.jpg' di dalam folder 'img'.
+                Pastikan ukuran foto proporsional (kotak atau lingkaran).
+            -->
+      <div class="hero-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQiCpK37PWPaeAi5wUzk5tHpIlMoeLY7hnLg&s" alt="Foto Profil"
+          onerror="this.src='https://via.placeholder.com/400x400?text=Foto+Profil'" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+        ABOUT SECTION 
+        Deskripsi singkat tentang diri siswa.
+    -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">Tentang Saya</h2>
+      <div class="about-content">
+        <p>
+          Saya adalah siswa SMK jurusan
+          <strong>Teknik Komputer dan Jaringan (TKJ)</strong> yang memiliki
+          ketertarikan besar dalam dunia Networking dan Sistem Administrasi.
+          Saya senang mempelajari bagaimana data berpindah dari satu perangkat
+          ke perangkat lain dan memastikan konektivitas berjalan lancar. Saya
+          memiliki semangat belajar yang tinggi dan siap menghadapi tantangan
+          di dunia industri IT.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+        SKILLS SECTION 
+        Daftar kemampuan teknis yang dimiliki.
+        Bisa ditambah atau dikurangi sesuai kemampuan siswa.
+    -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">Keahlian Teknis</h2>
+      <div class="skills-grid">
+        <!-- Skill 1 -->
+        <div class="skill-card">
+          <h3>Jaringan Dasar</h3>
+          <p>
+            Pemahaman TCP/IP, OSI Layer, Subnetting, dan Topologi Jaringan.
+          </p>
+        </div>
+        <!-- Skill 2 -->
+        <div class="skill-card">
+          <h3>MikroTik</h3>
+          <p>
+            Konfigurasi Router, Firewall, Hotspot, dan Manajemen Bandwidth.
+          </p>
+        </div>
+        <!-- Skill 3 -->
+        <div class="skill-card">
+          <h3>Cisco</h3>
+          <p>
+            Routing & Switching dasar, VLAN, dan simulasi menggunakan Cisco
+            Packet Tracer.
+          </p>
+        </div>
+        <!-- Skill 4 -->
+        <div class="skill-card">
+          <h3>Linux Server</h3>
+          <p>
+            Instalasi Debian/Ubuntu, Konfigurasi DNS, DHCP, Web Server, dan
+            FTP.
+          </p>
+        </div>
+        <!-- Skill 5 -->
+        <div class="skill-card">
+          <h3>Hardware</h3>
+          <p>
+            Perakitan Komputer, Instalasi OS, Troubleshooting, dan Crimping
+            Kabel UTP.
+          </p>
+        </div>
+        <!-- Skill 6 -->
+        <div class="skill-card">
+          <h3>Fiber Optik</h3>
+          <p>Dasar-dasar Fiber Optik, Splicing, dan penggunaan OPM/OTDR.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+        PROJECTS SECTION 
+        Menampilkan hasil praktik atau proyek yang pernah dikerjakan.
+        Ganti gambar project1.jpg, project2.jpg, dst di folder img.
+    -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Proyek & Praktik</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <img src="img/instalasi-jaringan.jpg" alt="Proyek 1"
+            onerror="this.src='https://via.placeholder.com/600x400?text=Gambar+Proyek+1'" />
+          <div class="project-info">
+            <h3>Instalasi Jaringan Lab Komputer</h3>
+            <p>
+              Melakukan instalasi kabel LAN dan konfigurasi switch untuk 20 PC
+              Client.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <img src="img/hotspot-mikrotik.jpg" alt="Proyek 2"
+            onerror="this.src='https://via.placeholder.com/600x400?text=Gambar+Proyek+2'" />
+          <div class="project-info">
+            <h3>Konfigurasi Hotspot Voucher</h3>
+            <p>
+              Membangun sistem Hotspot dengan MikroTik dan User Manager untuk
+              Wi-Fi sekolah.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <img src="img/deploy-debian.jpg" alt="Proyek 3"
+            onerror="this.src='https://via.placeholder.com/600x400?text=Gambar+Proyek+3'" />
+          <div class="project-info">
+            <h3>Web Server Sekolah</h3>
+            <p>
+              Deploy website sekolah menggunakan Linux Debian, Apache, MySQL,
+              dan PHP.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+        CONTACT SECTION 
+        Informasi kontak untuk menghubungi siswa.
+    -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Hubungi Saya</h2>
+      <p>
+        Tertarik untuk bekerja sama atau ingin berdiskusi tentang teknologi?
+        Silakan hubungi saya.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:joyhenry825@gmail.com" class="contact-btn">Email</a>
+        <a href="https://linkedin.com" target="_blank" class="contact-btn">LinkedIn</a>
+        <a href="https://github.com" target="_blank" class="contact-btn">GitHub</a>
+        <a href="https://wa.me/628123456789" target="_blank" class="contact-btn">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Portofolio William Pascal.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT untuk Hamburger Menu -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Tutup menu saat link di-klik
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
